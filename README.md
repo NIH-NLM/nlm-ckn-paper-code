@@ -18,26 +18,24 @@ git clone --recurse-submodules https://github.com/NIH-NLM/nlm-ckn-paper-code.git
 
 The "Download ZIP" option on GitHub does not include submodule contents.
 
-## Software by layer
+## Modules
 
-| Layer | Folder | Contents | Maintainer |
-|---|---|---|---|
-| Data workflows | `software/` | Dataset selection, marker gene discovery, and clustering quality control | Anne Deslattes Mays |
-| Database schema | [folder] | [To be completed] | Matt Diller |
-| Extract, transform, load (ETL) and deployment | [folder] | [To be completed] | Raymond LeClair |
-| User interface | [folder] | [To be completed] | William Spear |
+Each module is a Git submodule in `software/`, fixed at the tag or commit shown. Each owner confirms the entries for their own modules.
+
+| Module | Owner | Reference | Commit | Purpose |
+|---|---|---|---|---|
+| [cellxgene-harvester](https://github.com/NIH-NLM/cellxgene-harvester) | Anne Deslattes Mays | tag `v1.0` | `5544cf42eb523bce9fab356a2d4c74aa71c0e75e` | Selects datasets from CELLxGENE using ontology identifiers for tissue, disease, and age |
+| [scsilhouette](https://github.com/NIH-NLM/scsilhouette) | Anne Deslattes Mays | tag `v1.0` | `20e2b979108f2bc53fc0be008ffa7bdf44bb5988` | Computes silhouette scores to assess clustering quality |
+| [sc-nsforest-qc-nf](https://github.com/NIH-NLM/sc-nsforest-qc-nf) | Anne Deslattes Mays | tag `v1.0` | `d1fae1bafdd0b3d76b0bc2069e6df63f7aba19c6` | Runs NS-Forest marker gene discovery and silhouette quality control across datasets |
+| [sc-nsforest-qc-nf, neocortex run](https://github.com/NIH-NLM/sc-nsforest-qc-nf/tree/neocortex-run) | Anne Deslattes Mays | branch `neocortex-run` | `5f2f0f3031c6a40beea98b24e08c1d53e54745ca` | Processes the Jorstad neocortex dataset |
+| [sc-nsforest-qc-nf, retina run](https://github.com/NIH-NLM/sc-nsforest-qc-nf/tree/retina-run) | Anne Deslattes Mays | branch `retina-run` | `93d10d366659d2114159983b69a42426960d6c81` | Processes the Li retina dataset |
+| [To be completed] | Matt Diller | [tag] | [commit] | [purpose] |
+| [To be completed] | Raymond LeClair | [tag] | [commit] | [purpose] |
+| [To be completed] | William Spear | [tag] | [commit] | [purpose] |
+
+To add a module, use [`git submodule add`](https://git-scm.com/docs/git-submodule), check out the tag inside it, and open a pull request.
 
 ## Data workflows
-
-### Components
-
-| Component | Folder | Reference | Commit | Purpose |
-|---|---|---|---|---|
-| [cellxgene-harvester](https://github.com/NIH-NLM/cellxgene-harvester) | `software/cellxgene-harvester` | tag `v1.0` | `5544cf42eb523bce9fab356a2d4c74aa71c0e75e` | Selects datasets from CELLxGENE using ontology identifiers for tissue, disease, and age |
-| [scsilhouette](https://github.com/NIH-NLM/scsilhouette) | `software/scsilhouette` | tag `v1.0` | `20e2b979108f2bc53fc0be008ffa7bdf44bb5988` | Computes silhouette scores to assess clustering quality |
-| [sc-nsforest-qc-nf](https://github.com/NIH-NLM/sc-nsforest-qc-nf) | `software/sc-nsforest-qc-nf` | tag `v1.0` | `d1fae1bafdd0b3d76b0bc2069e6df63f7aba19c6` | Runs NS-Forest marker gene discovery and silhouette quality control across datasets |
-| [sc-nsforest-qc-nf, neocortex run](https://github.com/NIH-NLM/sc-nsforest-qc-nf/tree/neocortex-run) | `software/neocortex-run` | branch `neocortex-run` | `5f2f0f3031c6a40beea98b24e08c1d53e54745ca` | Processes the Jorstad neocortex dataset |
-| [sc-nsforest-qc-nf, retina run](https://github.com/NIH-NLM/sc-nsforest-qc-nf/tree/retina-run) | `software/retina-run` | branch `retina-run` | `93d10d366659d2114159983b69a42426960d6c81` | Processes the Li retina dataset |
 
 ### Runs
 
