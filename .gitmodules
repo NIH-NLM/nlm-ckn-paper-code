@@ -1,0 +1,15 @@
+[submodule "software/cellxgene-harvester"]
+	path = software/cellxgene-harvester
+	url = https://github.com/NIH-NLM/cellxgene-harvester
+[submodule "software/scsilhouette"]
+	path = software/scsilhouette
+	url = https://github.com/NIH-NLM/scsilhouette
+[submodule "software/neocortex-run"]
+	path = software/neocortex-run
+	url = https://github.com/NIH-NLM/sc-nsforest-qc-nf
+[submodule "software/retina-run"]
+	path = software/retina-run
+	url = https://github.com/NIH-NLM/sc-nsforest-qc-nf
+[submodule "software/sc-nsforest-qc-nf"]
+	path = software/sc-nsforest-qc-nf
+	url = https://github.com/NIH-NLM/sc-nsforest-qc-nf
