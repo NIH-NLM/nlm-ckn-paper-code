@@ -35,16 +35,6 @@ Each module is a Git submodule in `software/`, fixed at the tag or commit shown.
 
 To add a module, use [`git submodule add`](https://git-scm.com/docs/git-submodule), check out the tag inside it, and open a pull request.
 
-## Data workflows
-
-### Runs
-
-| Run | Datasets | Workflow | scsilhouette image | NS-Forest image |
-|---|---|---|---|---|
-| Main | 82 | `software/sc-nsforest-qc-nf` | `ghcr.io/nih-nlm/scsilhouette:1.5` | [digest] |
-| Neocortex | Jorstad | `software/neocortex-run` | `ghcr.io/nih-nlm/scsilhouette:v1.0` | `ghcr.io/nih-nlm/sc-nsforest-qc-nf/nsforest:4c380184b7a60bbc7f26938b737130953a5b5982` |
-| Retina | Li | `software/retina-run` | `ghcr.io/nih-nlm/scsilhouette:v1.0` | `ghcr.io/nih-nlm/sc-nsforest-qc-nf/nsforest@sha256:1b599d17f9639d99eb058bab5eb4b42a2f6b7616f0b047efc280e91e7956297b` |
-
 ### Why two datasets have their own runs
 
 The paper's figures for these two datasets came from earlier analyses, so each dataset has its own documented process. Neither dataset went through the standard filtering used in the main run.
