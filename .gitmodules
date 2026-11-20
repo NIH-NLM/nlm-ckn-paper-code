@@ -13,3 +13,6 @@
 [submodule "software/sc-nsforest-qc-nf"]
 	path = software/sc-nsforest-qc-nf
 	url = https://github.com/NIH-NLM/sc-nsforest-qc-nf
+[submodule "software/nlm-ckn-etl"]
+	path = software/nlm-ckn-etl
+	url = https://github.com/NIH-NLM/nlm-ckn-etl
